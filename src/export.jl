@@ -71,7 +71,7 @@ function export2lammps(fname, IP)
 
     # bonds
     data["bonds"] = OrderedDict()
-    radialsplines = ACE1.Splines.RadialSplines(V3.pibasis.basis1p.J; nnodes = 10000)
+    radialsplines = ACE1.Splines.RadialSplines(V3.pibasis.basis1p.J; nnodes = 2000)
     ranges, nodalvals, zlist = ACE1.Splines.export_splines(radialsplines)
     # compute spline derivatives
     # TODO: move this elsewhere
